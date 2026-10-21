@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "subscription-service"
+version = "0.1.0"
+description = "VPN subscription service template"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+alembic = ">=1.16"
+asyncpg = ">=0.30"
+fastapi = ">=0.115"
+pydantic-settings = ">=2.6"
+sqlalchemy = { version = ">=2.0.36", extras = ["asyncio"] }
+uvicorn = { version = ">=0.32", extras = ["standard"] }
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.8"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.ruff.lint.per-file-ignores]
+"migrations/versions/*" = ["F401"]

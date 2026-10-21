@@ -1,0 +1,33 @@
+# Окружение
+.venv/
+venv/
+.env
+*.env
+!**/.env.ci
+*.local*
+
+# Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Базы данных
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.rdb
+
+# Логи
+*.log
+
+# Редакторы и ОС
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
